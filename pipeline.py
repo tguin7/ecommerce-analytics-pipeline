@@ -7,6 +7,7 @@ from sqlalchemy import create_engine, text
 # Generate Raw Data
 def generate_raw_ecommerce_data(num_records=1000):
     # Simulate a raw JSON payload from an application database log
+    random.seed(42)
     products = {
         "Laptop": 999.99,
         "4K Monitor": 299.99,
