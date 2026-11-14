@@ -100,4 +100,4 @@ ORDER BY customer_lifetime_value DESC;
 report_df = pd.read_sql_query(query, engine)
 report_df.to_excel('clv_business_report.xlsx', index=False)
 
-print("Genered Excel report for the business stakeholders.")
+print("Generated 'clv_busniess_report.xlsx' Excel report for the business stakeholders.")
