@@ -1,7 +1,7 @@
 -- Query 1: Core Product Performance Matrix
 -- Evaluate sales velocity, volume, and total net yield
 SELECT p.product_name, p.unit_price, COUNT(f.order_id) AS transaction_count, SUM(f.quantity) AS total_units_sold, ROUND(SUM(f.net_revenue), 2) AS total_net_revenue
-FROM fact_orders f JOIN dim_products p ON f.product_name = d.product_name
+FROM fact_orders f JOIN dim_products p ON f.product_name = p.product_name
 GROUP BY p.product_name
 ORDER BY total_net_revenue DESC;
 
